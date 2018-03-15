@@ -3,12 +3,10 @@ FROM java:8-jdk-alpine
 ENV HADOOP_VERSION 2.7.3
 ENV SPARK_VERSION 2.1.1
 
+RUN echo "@community http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories
+
 RUN apk update && \
-    apk add python && \
-    apk add py-pip && \
-    apk add gcc && \
-    apk add python-dev && \
-    apk add g++
+    apk add python py-pip gcc python-dev g++ build-base openblas-dev@community ca-certificates
 
 RUN pip install --upgrade pip
 
