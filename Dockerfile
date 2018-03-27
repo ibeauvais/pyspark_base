@@ -1,7 +1,7 @@
 FROM java:8-jdk-alpine
 
 ENV HADOOP_VERSION 2.7.3
-ENV SPARK_VERSION 2.1.1
+ENV SPARK_VERSION 2.2.0
 
 RUN echo "@community http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories
 
